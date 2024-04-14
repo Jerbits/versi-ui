@@ -17,7 +17,7 @@ managing JavaScript projects with multiple packages. It optimizes the workflow a
 
 ### Vite
 
-build tool providing rapid hot module replacement
+build tool providing rapid hot module replacement.
 
   
 
