@@ -40,11 +40,11 @@ an open-source tool for developing and organizing UI components in isolation, wh
 
 
 
-    yarn start:vite-common
+    yarn start:<package name>
 
 ### Build Storybook
 
-    yarn build:vite-common
+    yarn build:<package name>
 
 or build all
 
