@@ -4,26 +4,17 @@ import { Animate } from ".";
 
 export default {
     title: "Example/Animate",
-    component: Animate,
+    component: Animate.Up,
     parameters: {
         layout: "fullscreen",
     },
 } as Meta<typeof Animate>;
 
-const mockedLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-];
 
-const Template: StoryFn<typeof Animate> = (args) => <Animate {...args} />;
+const Template: StoryFn<typeof Animate.Up> = (args) => <Animate.Up {...args}>Jerome</Animate.Up>;
 
-export const FooterWithLinks = Template.bind({});
-FooterWithLinks.args = {
-    links: mockedLinks,
-};
+export const Up = Template.bind({});
 
-export const FooterWithOneLink = Template.bind({});
-FooterWithOneLink.args = {
-    links: [mockedLinks[0]],
+Up.args = {
+    delay: 500,
 };
