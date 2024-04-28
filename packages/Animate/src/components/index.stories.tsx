@@ -1,5 +1,6 @@
 
 import { StoryFn, Meta } from "@storybook/react";
+import { Typography } from "@versi-ui/typography";
 import { Animate } from ".";
 
 export default {
@@ -11,7 +12,7 @@ export default {
 } as Meta<typeof Animate>;
 
 
-const Template: StoryFn<typeof Animate.Up> = (args) => <Animate.Up {...args}>Animated Up</Animate.Up>;
+const Template: StoryFn<typeof Animate.Up> = (args) => <Animate.Up {...args}><Typography.H1>Animate Up</Typography.H1></Animate.Up>;
 
 export const Up = Template.bind({});
 
