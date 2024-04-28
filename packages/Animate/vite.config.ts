@@ -3,7 +3,7 @@ import { getBaseConfig } from "../../vite.config";
 
 export default getBaseConfig({
   lib: {
-    entry: path.resolve(__dirname, "src/index.ts"),
+    entry: path.resolve(__dirname, "src/index.tsx"),
     name: "Animate",
     fileName: "animate",
   },

@@ -77,7 +77,7 @@ const Link: FC<TypographyProps> = ({ children, classes, ...rest }: TypographyPro
   );
 };
 
-export const Typography = {
+const Typography = {
   H1: Heading1,
   H2: Heading2,
   H3: Heading3,
@@ -88,3 +88,5 @@ export const Typography = {
   TAGLINE: Tagline,
   LINK: Link
 };
+
+export default Typography
