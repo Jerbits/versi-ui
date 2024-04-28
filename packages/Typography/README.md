@@ -1,7 +1,7 @@
-# Versi UI
+# Versi UI - Typography
 
   
-The animation component for Versi-UI. This component utilizes React-spring
+The typography component for Versi-UI
 
   
 
@@ -40,22 +40,14 @@ an open-source tool for developing and organizing UI components in isolation, wh
 
 
 
-    yarn start:<package name>
+    yarn start:typography
 
 ### Build Storybook
 
-    yarn build:<package name>
+    yarn build:typography
 
-or build all
-
-    yarn build
 
 ### Run tests
 
 
-    yarn test
-
-### Run lint
-
-
-    yarn lint
+    yarn test:typography

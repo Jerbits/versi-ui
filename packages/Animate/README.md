@@ -1,7 +1,7 @@
-# Versi UI
+# Versi UI - Animate
 
   
-The animation component for Versi-UI. This component utilizes React-spring
+A monorepo of reusable components for my various projects
 
   
 
@@ -40,22 +40,14 @@ an open-source tool for developing and organizing UI components in isolation, wh
 
 
 
-    yarn start:<package name>
+    yarn start:animate
 
 ### Build Storybook
 
-    yarn build:<package name>
+    yarn build:animate
 
-or build all
-
-    yarn build
 
 ### Run tests
 
 
-    yarn test
-
-### Run lint
-
-
-    yarn lint
+    yarn test:animate

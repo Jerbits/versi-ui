@@ -22,5 +22,20 @@
   },
   "devDependencies": {
     "@versi-ui/typography": "0.0.1"
-  }
+  },
+  "description": "Animation component for Versi-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jerbits/versi-ui.git"
+  },
+  "keywords": [
+    "Design System",
+    "Component Library"
+  ],
+  "author": "Jerbits",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jerbits/versi-ui/issues"
+  },
+  "homepage": "https://github.com/Jerbits/versi-ui#readme"
 }
