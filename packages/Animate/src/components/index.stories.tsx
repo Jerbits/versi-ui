@@ -11,7 +11,7 @@ export default {
 } as Meta<typeof Animate>;
 
 
-const Template: StoryFn<typeof Animate.Up> = (args) => <Animate.Up {...args}>Jerome</Animate.Up>;
+const Template: StoryFn<typeof Animate.Up> = (args) => <Animate.Up {...args}>Animated Up</Animate.Up>;
 
 export const Up = Template.bind({});
 

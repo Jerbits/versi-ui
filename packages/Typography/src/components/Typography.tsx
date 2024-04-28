@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import { default as cn } from 'classnames';
 
 interface TypographyProps {
-  children: JSX.Element | ReactNode;
+  children?: JSX.Element | ReactNode;
   classes?: string;
 }
 

@@ -5,9 +5,10 @@
     "packages/*"
   ],
   "scripts": {
-    "start:animate": "lerna run --scope animate storybook --stream",
-    "build:animate": "lerna run --scope animate build --stream",
-    "test:animate": "lerna run --scope animate test --stream",
+    "start": "lerna run storybook",
+    "start:typography": "lerna run --scope typography storybook --stream",
+    "build:typography": "lerna run --scope typography build --stream",
+    "test:typography": "lerna run --scope typography test --stream",
     "build": "lerna run build --stream",
     "storybook": "storybook dev -p 6006"
   },
