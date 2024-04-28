@@ -1,6 +1,6 @@
 {
   "name": "@versi-ui/typography",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
@@ -18,5 +18,21 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "description": "The typography component for Versi-UI",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jerbits/versi-ui.git"
+  },
+  "keywords": [
+    "Typography",
+    "Design System",
+    "Component Library"
+  ],
+  "author": "Jerbits",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jerbits/versi-ui/issues"
+  },
+  "homepage": "https://github.com/Jerbits/versi-ui/tree/master/packages/Typography"
 }

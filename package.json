@@ -1,6 +1,6 @@
 {
   "name": "versi-ui",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],

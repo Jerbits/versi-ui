@@ -1,6 +1,6 @@
 {
   "name": "@versi-ui/animate",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "main": "dist/animate.js",
@@ -30,12 +30,13 @@
   },
   "keywords": [
     "Design System",
-    "Component Library"
+    "Component Library",
+    "Animation"
   ],
   "author": "Jerbits",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Jerbits/versi-ui/issues"
   },
-  "homepage": "https://github.com/Jerbits/versi-ui#readme"
+  "homepage": "https://github.com/Jerbits/versi-ui/tree/master/packages/Animate"
 }
