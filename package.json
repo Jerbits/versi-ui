@@ -5,12 +5,12 @@
     "packages/*"
   ],
   "scripts": {
-    "start:typography": "lerna run --scope @jerbits/typography storybook --stream",
-    "build:typography": "lerna run --scope @jerbits/typography build --stream",
-    "test:typography": "lerna run --scope @jerbits/typography test --stream",
-    "start:animate": "lerna run --scope @jerbits/animate storybook --stream",
-    "build:animate": "lerna run --scope @jerbits/animate build --stream",
-    "test:animate": "lerna run --scope @jerbits/animate test --stream",
+    "start:t": "lerna run --scope @jerbits/typography storybook --stream",
+    "build:t": "lerna run --scope @jerbits/typography build --stream",
+    "test:t": "lerna run --scope @jerbits/typography test --stream",
+    "start:a": "lerna run --scope @jerbits/animate storybook --stream",
+    "build:a": "lerna run --scope @jerbits/animate build --stream",
+    "test:a": "lerna run --scope @jerbits/animate test --stream",
     "build": "lerna run build --stream",
     "storybook": "storybook dev -p 6006"
   },

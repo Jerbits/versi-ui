@@ -1,65 +1,65 @@
 import './index.css';
 import { jsx as a } from "react/jsx-runtime";
-import l from "classnames";
-const o = ({ children: t, classes: e }) => {
-  const s = l(
-    "text-xl",
-    "landscape:mobile-landscape:text-xl sm:text-2xl lg:text-3xl mb-5 md:mb-5",
+import i from "classnames";
+const n = ({ children: t, classes: e }) => {
+  const s = i(
+    "vui-text-xl",
+    "landscape:mobile-landscape:vui-text-xl sm:vui-text-2xl lg:vui-text-3xl vui-mb-5 md:vui-mb-5",
     e
   );
   return /* @__PURE__ */ a("h1", { className: s, children: t });
-}, x = ({ children: t, classes: e }) => {
-  const s = l(
-    "text-lg font-bold",
-    "landscape:mobile-landscape:text-lg sm:text-xl lg:text-2xl mb-5 md:mb-5",
+}, u = ({ children: t, classes: e }) => {
+  const s = i(
+    "vui-text-lg vui-font-bold",
+    "landscape:mobile-landscape:vui-text-lg sm:vui-text-xl lg:vui-text-2xl vui-mb-5 md:vui-mb-5",
     e
   );
   return /* @__PURE__ */ a("h2", { className: s, children: t });
-}, r = ({ children: t, classes: e }) => {
-  const s = l("text-lg sm:text-4xl font-extrabold", e);
+}, o = ({ children: t, classes: e }) => {
+  const s = i("vui-text-lg sm:vui-text-4xl vui-font-extrabold", e);
   return /* @__PURE__ */ a("h3", { className: s, children: t });
+}, x = ({ children: t, classes: e }) => {
+  const s = i("vui-text-base sm:vui-text-2xl vui-font-extrabold", e);
+  return /* @__PURE__ */ a("h4", { className: s, children: t });
+}, v = ({ children: t, classes: e }) => {
+  const s = i(
+    "vui-text-2xl",
+    "landscape:mobile-landscape:vui-text-lg sm:vui-text-3xl lg:vui-text-6xl",
+    e
+  );
+  return /* @__PURE__ */ a("h4", { className: s, children: t });
+}, r = ({ children: t, classes: e }) => {
+  const s = i(
+    "vui-text-base landscape:mobile-landscape:vui-text-base vui-pb-5  vui-max-w-[1000px]",
+    e
+  );
+  return /* @__PURE__ */ a("p", { className: s, children: t });
 }, c = ({ children: t, classes: e }) => {
-  const s = l("text-base sm:text-2xl font-extrabold", e);
-  return /* @__PURE__ */ a("h4", { className: s, children: t });
+  const s = i(
+    "vui-text-sm sm:vui-text-base landscape:mobile-landscape:vui-text-base vui-font-extrabold vui-pb-5 sm:vui-pb-10 last:vui-pb-0",
+    e
+  );
+  return /* @__PURE__ */ a("p", { className: s, children: t });
 }, m = ({ children: t, classes: e }) => {
-  const s = l(
-    "text-2xl",
-    "landscape:mobile-landscape:text-lg sm:text-3xl lg:text-6xl",
-    e
-  );
-  return /* @__PURE__ */ a("h4", { className: s, children: t });
-}, p = ({ children: t, classes: e }) => {
-  const s = l(
-    "text-base landscape:mobile-landscape:text-base pb-5  max-w-[1000px]",
+  const s = i(
+    "vui-text-xs sm:vui-text-base md:vui-text-lg landscape:mobile-landscape:vui-text-xs vui-font-extrabold vui-pb-10 last:vui-pb-0",
     e
   );
   return /* @__PURE__ */ a("p", { className: s, children: t });
-}, d = ({ children: t, classes: e }) => {
-  const s = l(
-    "text-sm sm:text-base landscape:mobile-landscape:text-base font-extrabold pb-5 sm:pb-10 last:pb-0",
-    e
-  );
-  return /* @__PURE__ */ a("p", { className: s, children: t });
-}, b = ({ children: t, classes: e }) => {
-  const s = l(
-    "text-xs sm:text-base md:text-lg landscape:mobile-landscape:text-xs font-extrabold pb-10 last:pb-0",
-    e
-  );
-  return /* @__PURE__ */ a("p", { className: s, children: t });
-}, g = ({ children: t, classes: e, ...s }) => {
-  const n = l("hover:border-b-2 border-oras-pink", e);
-  return /* @__PURE__ */ a("a", { ...s, className: n, children: t });
-}, y = {
-  H1: o,
-  H2: x,
-  H3: r,
-  H4: c,
-  H5: m,
-  PA: p,
-  TOS: d,
-  TAGLINE: b,
-  LINK: g
+}, p = ({ children: t, classes: e, ...s }) => {
+  const l = i("hover:vui-border-b-2 vui-border-oras-pink", e);
+  return /* @__PURE__ */ a("a", { ...s, className: l, children: t });
+}, g = {
+  H1: n,
+  H2: u,
+  H3: o,
+  H4: x,
+  H5: v,
+  PA: r,
+  TOS: c,
+  TAGLINE: m,
+  LINK: p
 };
 export {
-  y as Typography
+  g as Typography
 };

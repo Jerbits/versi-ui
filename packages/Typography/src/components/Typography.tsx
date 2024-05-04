@@ -9,8 +9,8 @@ export interface TypographyProps {
 
 const Heading1: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const heading1styles = cn(
-    'text-xl',
-    'landscape:mobile-landscape:text-xl sm:text-2xl lg:text-3xl mb-5 md:mb-5',
+    'vui-text-xl',
+    'landscape:mobile-landscape:vui-text-xl sm:vui-text-2xl lg:vui-text-3xl vui-mb-5 md:vui-mb-5',
     classes
   );
   return <h1 className={heading1styles}>{children}</h1>;
@@ -18,27 +18,27 @@ const Heading1: FC<TypographyProps> = ({ children, classes }: TypographyProps) =
 
 const Heading2: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const heading2styles = cn(
-    'text-lg font-bold',
-    'landscape:mobile-landscape:text-lg sm:text-xl lg:text-2xl mb-5 md:mb-5',
+    'vui-text-lg vui-font-bold',
+    'landscape:mobile-landscape:vui-text-lg sm:vui-text-xl lg:vui-text-2xl vui-mb-5 md:vui-mb-5',
     classes
   );
   return <h2 className={heading2styles}>{children}</h2>;
 };
 
 const Heading3: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
-  const heading3styles = cn('text-lg sm:text-4xl font-extrabold', classes);
+  const heading3styles = cn('vui-text-lg sm:vui-text-4xl vui-font-extrabold', classes);
   return <h3 className={heading3styles}>{children}</h3>;
 };
 
 const Heading4: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
-  const heading4styles = cn('text-base sm:text-2xl font-extrabold', classes);
+  const heading4styles = cn('vui-text-base sm:vui-text-2xl vui-font-extrabold', classes);
   return <h4 className={heading4styles}>{children}</h4>;
 };
 
 const Heading5: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const heading5styles = cn(
-    'text-2xl',
-    'landscape:mobile-landscape:text-lg sm:text-3xl lg:text-6xl',
+    'vui-text-2xl',
+    'landscape:mobile-landscape:vui-text-lg sm:vui-text-3xl lg:vui-text-6xl',
     classes
   );
   return <h4 className={heading5styles}>{children}</h4>;
@@ -46,7 +46,7 @@ const Heading5: FC<TypographyProps> = ({ children, classes }: TypographyProps) =
 
 const ParagraphA: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const paragraphAstyles = cn(
-    'text-base landscape:mobile-landscape:text-base pb-5  max-w-[1000px]',
+    'vui-text-base landscape:mobile-landscape:vui-text-base vui-pb-5  vui-max-w-[1000px]',
     classes
   );
   return <p className={paragraphAstyles}>{children}</p>;
@@ -54,7 +54,7 @@ const ParagraphA: FC<TypographyProps> = ({ children, classes }: TypographyProps)
 
 const ParagraphTos: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const paragraphAstyles = cn(
-    'text-sm sm:text-base landscape:mobile-landscape:text-base font-extrabold pb-5 sm:pb-10 last:pb-0',
+    'vui-text-sm sm:vui-text-base landscape:mobile-landscape:vui-text-base vui-font-extrabold vui-pb-5 sm:vui-pb-10 last:vui-pb-0',
     classes
   );
   return <p className={paragraphAstyles}>{children}</p>;
@@ -62,7 +62,7 @@ const ParagraphTos: FC<TypographyProps> = ({ children, classes }: TypographyProp
 
 const Tagline: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const taglineStyles = cn(
-    'text-xs sm:text-base md:text-lg landscape:mobile-landscape:text-xs font-extrabold pb-10 last:pb-0',
+    'vui-text-xs sm:vui-text-base md:vui-text-lg landscape:mobile-landscape:vui-text-xs vui-font-extrabold vui-pb-10 last:vui-pb-0',
     classes
   );
   return <p className={taglineStyles}>{children}</p>;
@@ -70,7 +70,7 @@ const Tagline: FC<TypographyProps> = ({ children, classes }: TypographyProps) =>
 
 // unused but will be handy later on
 const Link: FC<TypographyProps> = ({ children, classes, ...rest }: TypographyProps) => {
-  const linkStyles = cn('hover:border-b-2 border-oras-pink', classes);
+  const linkStyles = cn('hover:vui-border-b-2 vui-border-oras-pink', classes);
   return (
     <a {...rest} className={linkStyles}>
       {children}

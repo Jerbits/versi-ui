@@ -7,7 +7,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css'
 
 const isExternal = (id: string) => !id.startsWith(".") && !path.isAbsolute(id);
 
-export const getBaseConfig = ({ plugins = [], lib }) =>
+export const getBaseConfig = ({ plugins = [], lib, resolve = {} }) =>
   defineConfig({
     plugins: [pluginReact(), dts({ rollupTypes: true }), libInjectCss(), ...plugins],
     build: {
@@ -21,4 +21,5 @@ export const getBaseConfig = ({ plugins = [], lib }) =>
         },
       },
     },
+    resolve
   });

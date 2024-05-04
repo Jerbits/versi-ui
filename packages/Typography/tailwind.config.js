@@ -5,8 +5,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'mobile-landscape': { max: '900px' }
+      }
+    },
   },
   plugins: [],
+  prefix: 'vui-'
 }
 
