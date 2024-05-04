@@ -1,5 +1,5 @@
 {
-  "name": "@versi-ui/typography",
+  "name": "@jerbits/typography",
   "private": false,
   "version": "0.0.2",
   "type": "module",
@@ -33,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/Jerbits/versi-ui/issues"
   },
-  "homepage": "https://github.com/Jerbits/versi-ui/tree/master/packages/Typography"
+  "homepage": "https://github.com/Jerbits/versi-ui/tree/master/packages/Typography",
+  "devDependencies": {}
 }

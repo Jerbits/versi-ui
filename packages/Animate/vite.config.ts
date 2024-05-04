@@ -5,6 +5,6 @@ export default getBaseConfig({
   lib: {
     entry: path.resolve(__dirname, "src/index.tsx"),
     name: "Animate",
-    fileName: "animate",
+    fileName: "index",
   },
 });

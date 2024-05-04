@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
 import { default as cn } from 'classnames';
+import './index.css';
 
 export interface TypographyProps {
   children?: JSX.Element | ReactNode;
@@ -8,8 +9,8 @@ export interface TypographyProps {
 
 const Heading1: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const heading1styles = cn(
-    'zp-text-xl',
-    'landscape:mobile-landscape:zp-text-xl sm:zp-text-2xl lg:zp-text-3xl zp-mb-5 md:zp-mb-5',
+    'text-xl',
+    'landscape:mobile-landscape:text-xl sm:text-2xl lg:text-3xl mb-5 md:mb-5',
     classes
   );
   return <h1 className={heading1styles}>{children}</h1>;
@@ -17,27 +18,27 @@ const Heading1: FC<TypographyProps> = ({ children, classes }: TypographyProps) =
 
 const Heading2: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const heading2styles = cn(
-    'zp-text-lg zp-font-bold',
-    'landscape:mobile-landscape:zp-text-lg sm:zp-text-xl lg:zp-text-2xl zp-mb-5 md:zp-mb-5',
+    'text-lg font-bold',
+    'landscape:mobile-landscape:text-lg sm:text-xl lg:text-2xl mb-5 md:mb-5',
     classes
   );
   return <h2 className={heading2styles}>{children}</h2>;
 };
 
 const Heading3: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
-  const heading3styles = cn('zp-text-lg sm:zp-text-4xl zp-font-extrabold', classes);
+  const heading3styles = cn('text-lg sm:text-4xl font-extrabold', classes);
   return <h3 className={heading3styles}>{children}</h3>;
 };
 
 const Heading4: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
-  const heading4styles = cn('zp-text-base sm:zp-text-2xl zp-font-extrabold', classes);
+  const heading4styles = cn('text-base sm:text-2xl font-extrabold', classes);
   return <h4 className={heading4styles}>{children}</h4>;
 };
 
 const Heading5: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const heading5styles = cn(
-    'zp-text-2xl',
-    'landscape:mobile-landscape:zp-text-lg sm:zp-text-3xl lg:zp-text-6xl',
+    'text-2xl',
+    'landscape:mobile-landscape:text-lg sm:text-3xl lg:text-6xl',
     classes
   );
   return <h4 className={heading5styles}>{children}</h4>;
@@ -45,7 +46,7 @@ const Heading5: FC<TypographyProps> = ({ children, classes }: TypographyProps) =
 
 const ParagraphA: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const paragraphAstyles = cn(
-    'zp-text-base landscape:mobile-landscape:zp-text-base zp-pb-5 zp- zp-max-w-[1000px]',
+    'text-base landscape:mobile-landscape:text-base pb-5  max-w-[1000px]',
     classes
   );
   return <p className={paragraphAstyles}>{children}</p>;
@@ -53,7 +54,7 @@ const ParagraphA: FC<TypographyProps> = ({ children, classes }: TypographyProps)
 
 const ParagraphTos: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const paragraphAstyles = cn(
-    'zp-text-sm sm:zp-text-base landscape:mobile-landscape:zp-text-base zp-font-extrabold zp-pb-5 sm:zp-pb-10 last:zp-pb-0',
+    'text-sm sm:text-base landscape:mobile-landscape:text-base font-extrabold pb-5 sm:pb-10 last:pb-0',
     classes
   );
   return <p className={paragraphAstyles}>{children}</p>;
@@ -61,7 +62,7 @@ const ParagraphTos: FC<TypographyProps> = ({ children, classes }: TypographyProp
 
 const Tagline: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
   const taglineStyles = cn(
-    'zp-text-xs sm:zp-text-base md:zp-text-lg landscape:mobile-landscape:zp-text-xs zp-font-extrabold zp-pb-10 last:zp-pb-0',
+    'text-xs sm:text-base md:text-lg landscape:mobile-landscape:text-xs font-extrabold pb-10 last:pb-0',
     classes
   );
   return <p className={taglineStyles}>{children}</p>;
@@ -69,7 +70,7 @@ const Tagline: FC<TypographyProps> = ({ children, classes }: TypographyProps) =>
 
 // unused but will be handy later on
 const Link: FC<TypographyProps> = ({ children, classes, ...rest }: TypographyProps) => {
-  const linkStyles = cn('hover:zp-border-b-2 zp-border-oras-pink', classes);
+  const linkStyles = cn('hover:border-b-2 border-oras-pink', classes);
   return (
     <a {...rest} className={linkStyles}>
       {children}

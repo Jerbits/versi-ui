@@ -1,6 +1,6 @@
 
 import { StoryFn, Meta } from "@storybook/react";
-import { Typography } from "@versi-ui/typography";
+import { Typography } from "@jerbits/typography";
 import { Animate } from ".";
 
 export default {

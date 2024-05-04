@@ -1,10 +1,10 @@
 {
-  "name": "@versi-ui/animate",
+  "name": "@jerbits/animate",
   "private": false,
   "version": "0.0.2",
   "type": "module",
-  "main": "dist/animate.js",
-  "types": "dist/animate.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -21,7 +21,7 @@
     "react-intersection-observer": "^9.8.2"
   },
   "devDependencies": {
-    "@versi-ui/typography": "^0.0.2"
+    "@jerbits/typography": "^0.0.2"
   },
   "description": "Animation component for Versi-ui",
   "repository": {
