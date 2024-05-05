@@ -1,31 +1,15 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "paths": {
-            "@/*": [
-                "./src"
-            ],
-            "@Components/*": [
-                "./src/components/*"
-            ],
-            "@Hooks/*": [
-                "./src/hooks/*"
-            ],
-            "@Mocks/*": [
-                "./src/mocks/*"
-            ],
-            "@Helpers/*": [
-                "./src/helpers/*"
-            ],
-            "@Types/*": [
-                "./src/types/*"
-            ],
-            "@Icons/*": [
-                "./src/assets/icons/*"
-            ],
-            "@Constants/*": [
-                "./src/constants/*"
-            ],
-        }
-    }
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src"],
+			"@Components/*": ["./src/components/*"],
+			"@Hooks/*": ["./src/hooks/*"],
+			"@Mocks/*": ["./src/mocks/*"],
+			"@Helpers/*": ["./src/helpers/*"],
+			"@Types/*": ["./src/types/*"],
+			"@Icons/*": ["./src/assets/icons/*"],
+			"@Constants/*": ["./src/constants/*"]
+		}
+	}
 }
