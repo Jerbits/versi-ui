@@ -1,7 +1,7 @@
 # :fire: Versi UI
 
   
-Monorepo of common components I use in various projects. A React-base component library built with Lerna, Storyboo, and ViteJS.
+Monorepo of common components I use in various projects. A React-base component library built with Lerna, Storybook, and ViteJS.
 
   
 
@@ -11,19 +11,19 @@ Monorepo of common components I use in various projects. A React-base component 
 
 ###  :wrench: Lerna
 
-managing JavaScript projects with multiple packages. It optimizes the workflow around managing multipackage repositories with git and npm. 
+Managing JavaScript projects with multiple packages. It optimizes the workflow around managing multipackage repositories with git and npm. 
 
   
 
 ### :zap: Vite
 
-build tool providing rapid hot module replacement.
+Build tool providing rapid hot module replacement.
 
   
 
 ### :books: Storybook
 
-an open-source tool for developing and organizing UI components in isolation, which also serves as a platform for visual testing and creating interactive documentation.
+An open-source tool for developing and organizing UI components in isolation, which also serves as a platform for visual testing and creating interactive documentation.
 
 
 ### :dash: Tailwind
@@ -37,17 +37,24 @@ A utility-first CSS framework packed with classes that can be composed to build 
 
     yarn install
 
-### Run Storybook on a specific package
-```
-yarn start:<package name>
-```
-### Build Storybook
+### Run Storybook for a specific package
+
+    yarn start:<package name>
+
+or start all
+
+    yarn sb
+### Build Storybook for a specific package
 
     yarn build:<package name>
 
 or build all
 
     yarn build
+
+### Generate Storybook static bundle for all packages
+
+    yarn sb-build
 
 ### Run tests
 
