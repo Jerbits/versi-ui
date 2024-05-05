@@ -1,7 +1,7 @@
-# Versi UI
+# Versi UI - Candy
 
   
-Monorepo of common components I use in various projects.
+The Candy component for Versi-UI
 
   
 
@@ -32,26 +32,22 @@ an open-source tool for developing and organizing UI components in isolation, wh
 
 ### Install dependencies
 
+
+
     yarn install
 
 ### Run Storybook
 
-    yarn start:<package name>
+
+
+    yarn start:candy
 
 ### Build Storybook
 
-    yarn build:<package name>
+    yarn build:candy
 
-or build all
-
-    yarn build
 
 ### Run tests
 
 
-    yarn test
-
-### Run lint
-
-
-    yarn lint
+    yarn test:candy

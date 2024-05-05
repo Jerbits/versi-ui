@@ -1,7 +1,10 @@
-# Versi UI
+---
+to: packages/<%= h.capitalize(name) %>/README.md
+---
+# Versi UI - <%= h.capitalize(name) %>
 
   
-Monorepo of common components I use in various projects.
+The <%= h.capitalize(name) %> component for Versi-UI
 
   
 
@@ -32,26 +35,22 @@ an open-source tool for developing and organizing UI components in isolation, wh
 
 ### Install dependencies
 
+
+
     yarn install
 
 ### Run Storybook
 
-    yarn start:<package name>
+
+
+    yarn start:<%= name.toLowerCase() %>
 
 ### Build Storybook
 
-    yarn build:<package name>
+    yarn build:<%= name.toLowerCase() %>
 
-or build all
-
-    yarn build
 
 ### Run tests
 
 
-    yarn test
-
-### Run lint
-
-
-    yarn lint
+    yarn test:<%= name.toLowerCase() %>
