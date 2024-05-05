@@ -3,17 +3,18 @@ import { default as cn } from 'classnames';
 import './index.css';
 
 export interface TypographyProps {
-	children?: JSX.Element | ReactNode;
+	children: JSX.Element | ReactNode;
 	classes?: string;
+	id?: string;
 }
 
-const Heading1: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {
+const Heading1: FC<TypographyProps> = ({ children, classes, id }: TypographyProps) => {
 	const heading1styles = cn(
 		'vui-text-2xl',
 		'sm:vui-text-3xl lg:vui-text-6xl landscape:mobile-landscape:vui-text-lg',
 		classes
 	);
-	return <h1 className={heading1styles}>{children}</h1>;
+	return <h1 id={id} className={heading1styles}>{children}</h1>;
 };
 
 const Heading2: FC<TypographyProps> = ({ children, classes }: TypographyProps) => {

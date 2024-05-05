@@ -1,7 +1,7 @@
-# Versi UI
+# :fire: Versi UI
 
   
-Monorepo of common components I use in various projects.
+Monorepo of common components I use in various projects. A React-base component library built with Lerna, Storyboo, and ViteJS.
 
   
 
@@ -9,23 +9,26 @@ Monorepo of common components I use in various projects.
 
   
 
-### Lerna
+###  :wrench: Lerna
 
-managing JavaScript projects with multiple packages. It optimizes the workflow around managing multipackage repositories with git and npm.
+managing JavaScript projects with multiple packages. It optimizes the workflow around managing multipackage repositories with git and npm. 
 
   
 
-### Vite
+### :zap: Vite
 
 build tool providing rapid hot module replacement.
 
   
 
-### Storybook
+### :books: Storybook
 
 an open-source tool for developing and organizing UI components in isolation, which also serves as a platform for visual testing and creating interactive documentation.
 
 
+### :dash: Tailwind
+
+A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
 
 ## Getting Started
 
@@ -34,10 +37,10 @@ an open-source tool for developing and organizing UI components in isolation, wh
 
     yarn install
 
-### Run Storybook
-
-    yarn start:<package name>
-
+### Run Storybook on a specific package
+```
+yarn start:<package name>
+```
 ### Build Storybook
 
     yarn build:<package name>
@@ -51,7 +54,41 @@ or build all
 
     yarn test
 
-### Run lint
-
-
+### Run eslint
     yarn lint
+
+### Run prettier
+
+
+    yarn format
+
+### Run typecheck
+
+
+    yarn typecheck
+
+## Scaffolding a Package
+
+You can create a skeleton of a package by running the template generator. This will generate a scaffolding of an NPM publish-ready component with all necessary dependencies (storybook, eslint, prettier, etc.).
+
+```bash
+$ yarn:make package
+
+$ hygen package new
+? Package name? »  Button
+
+added: packages/Package/.storybook/main.ts
+added: packages/Package/.storybook/preview-head.html
+added: packages/Package/.storybook/preview.ts
+added: packages/Package/package.json
+added: packages/Package/postcss.config.cjs
+added: packages/Package/src/components/index.css
+added: packages/Package/src/components/index.stories.tsx
+added: packages/Package/src/components/index.ts
+added: packages/Package/src/components/Package.tsx
+added: packages/Package/src/index.tsx
+added: packages/Package/src/vite-env.d.ts
+added: packages/Package/tailwind.config.js
+added: packages/Package/tsconfig.json
+added: packages/Package/vite.config.ts
+```

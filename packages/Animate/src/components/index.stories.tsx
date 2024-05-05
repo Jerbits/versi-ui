@@ -7,7 +7,7 @@ export default {
     title: "Example/Animate",
     component: Animate.Up,
     parameters: {
-        layout: "fullscreen",
+        layout: "centered",
     },
 } as Meta<typeof Animate>;
 
