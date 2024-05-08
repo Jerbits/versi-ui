@@ -21,13 +21,13 @@ export interface AnimateProps {
 
 const RenderPropAnimation = (springConfig: AnimationConfigProps, isReverse: boolean) => {
   const Component = ({ children, classes, animationFlag, delay = 0, unmount = false }: AnimateProps) => {
-    const [isShow, setIsShow] = useState<boolean>(unmount);
+    const [isShow, setIsShow] = useState<boolean>(true);
     const { ref, inView } = useInView({
       triggerOnce: true,
       threshold: 0
     });
     const classnames = cn(classes, {
-      '!vui-hidden': !isShow // hide the component with CSS versus un-mounting to prevent re-rendering of hooks
+      '!vui-hidden': !isShow && unmount // hide the component with CSS versus un-mounting to prevent re-rendering of hooks
     });
     const animationStyles = useSpring({
       ...springConfig(animationFlag ?? inView, delay, isReverse),

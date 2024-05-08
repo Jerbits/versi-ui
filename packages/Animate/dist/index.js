@@ -2,7 +2,7 @@ import { jsx as a, Fragment as f } from "react/jsx-runtime";
 import { useState as h } from "react";
 import w from "classnames";
 import { easings as i, useSpring as x, animated as R } from "@react-spring/web";
-import { useInView as A } from "react-intersection-observer";
+import { useInView as v } from "react-intersection-observer";
 const m = (t, e = 0, o = !1) => ({
   opacity: t ? 1 : 0,
   x: t ? 0 : o ? 50 : -50,
@@ -19,7 +19,7 @@ const m = (t, e = 0, o = !1) => ({
     duration: 500,
     easing: i.easeOutCirc
   }
-}), I = (t, e = 0) => ({
+}), A = (t, e = 0) => ({
   opacity: t ? 1 : 0,
   transform: `scale(${t ? 1 : 0})`,
   delay: e,
@@ -27,19 +27,19 @@ const m = (t, e = 0, o = !1) => ({
     duration: 200,
     easing: i.easeOutCirc
   }
-}), V = (t, e = 0) => ({
+}), I = (t, e = 0) => ({
   opacity: t ? 1 : 0,
   delay: e,
   config: {
     duration: 300,
     easing: i.easeOutCirc
   }
-}), n = (t, e) => ({ children: r, classes: p, animationFlag: s, delay: g = 0, defaultView: l = !1 }) => {
-  const [d, c] = h(l), { ref: C, inView: y } = A({
+}), n = (t, e) => ({ children: r, classes: p, animationFlag: s, delay: g = 0, unmount: l = !1 }) => {
+  const [d, c] = h(!0), { ref: C, inView: y } = v({
     triggerOnce: !0,
     threshold: 0
   }), S = w(p, {
-    "!hidden": !d
+    "!vui-hidden": !d && l
     // hide the component with CSS versus un-mounting to prevent re-rendering of hooks
   }), O = x({
     ...t(s ?? y, g, e),
@@ -52,8 +52,8 @@ const m = (t, e = 0, o = !1) => ({
   Right: n(m, !0),
   Up: n(u, !0),
   Down: n(u, !1),
-  Opacity: n(V, !1),
-  Scale: n(I, !1)
+  Opacity: n(I, !1),
+  Scale: n(A, !1)
 };
 export {
   P as Animate
