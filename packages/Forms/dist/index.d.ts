@@ -1,3 +1,4 @@
+import { ChangeEvent } from 'react';
 import { FC } from 'react';
 
 export declare const TextField: FC<TextFieldProps>;
@@ -9,6 +10,7 @@ declare interface TextFieldProps {
     placeholder?: string;
     labelClasses?: string;
     inputClasses?: string;
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export { }
