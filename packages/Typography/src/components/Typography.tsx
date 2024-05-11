@@ -9,9 +9,8 @@ export interface TypographyProps {
 	classes?: string;
 	id?: string;
 	size?: TSize;
+	gradient?: string; // gradient css function e.g. linear-gradient(#e66465, #9198e5)
 }
-
-
 
 const STYLES_MAP = {
 	H1: 'vui-text-2xl sm:vui-text-3xl lg:vui-text-6xl landscape:mobile-landscape:vui-text-lg',
@@ -19,13 +18,13 @@ const STYLES_MAP = {
 	H3: 'vui-text-lg sm:vui-text-xl lg:vui-text-4xl landscape:mobile-landscape:vui-text-lg',
 	H4: 'vui-text-lg sm:vui-text-xl lg:vui-text-3xl landscape:mobile-landscape:vui-text-lg',
 	H5: 'vui-text-base sm:vui-text-lg lg:vui-text-2xl landscape:mobile-landscape:vui-text-lg',
-	P: 'vui-text-sm sm:vui-text-base lg:vui-text-lg landscape:mobile-landscape:vui-text-lg',
+	P: 'vui-text-sm sm:vui-text-base lg:vui-text-lg landscape:mobile-landscape:vui-text-lg'
 } as Record<TSize, string>;
 
-const Heading1: FC<TypographyProps> = ({ children, classes, id, size = 'H1' }: TypographyProps) => {
-	const heading1styles = cn(STYLES_MAP[size], classes);
+const Heading1: FC<TypographyProps> = ({ children, classes, id, size = 'H1', gradient }: TypographyProps) => {
+	const heading1styles = cn(STYLES_MAP[size], { '!vui-bg-clip-text vui-text-transparent vui-pb-[4%]': gradient }, classes);
 	return (
-		<h1 id={id} className={heading1styles}>
+		<h1 id={id} className={heading1styles} style={gradient ? { background: gradient } : {}}>
 			{children}
 		</h1>
 	);

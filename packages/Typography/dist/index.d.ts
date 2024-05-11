@@ -18,6 +18,7 @@ declare interface TypographyProps {
     classes?: string;
     id?: string;
     size?: TSize;
+    gradient?: string;
 }
 
 export { }
