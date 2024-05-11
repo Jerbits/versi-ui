@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@-webkit-keyframes move {
+    0%{background-position:10% 0%}
+    50%{background-position:95% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes move {
+    0%{background-position:10% 0%}
+    50%{background-position:95% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes move { 
+    0%{background-position:10% 0%}
+    50%{background-position:95% 100%}
+    100%{background-position:10% 0%}
+}

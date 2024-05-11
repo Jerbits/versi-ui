@@ -6,7 +6,7 @@ module.exports = {
 		extend: {
 			screens: {
 				'mobile-landscape': { max: '900px' }
-			}
+			},
 		}
 	},
 	plugins: [],

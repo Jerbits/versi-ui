@@ -1,53 +1,73 @@
 # Versi UI - Typography
 
-  
-The typography component for Versi-UI
-
-  
-
-## Tooling
-
-  
-
-### Lerna
-
-managing JavaScript projects with multiple packages. It optimizes the workflow around managing multipackage repositories with git and npm.
-
-  
-
-### Vite
-
-build tool providing rapid hot module replacement.
-
-  
-
-### Storybook
-
-an open-source tool for developing and organizing UI components in isolation, which also serves as a platform for visual testing and creating interactive documentation.
-
-
+Typography is a simple React component that handles common HTML headings and its associated configurations when rendering them
+to your page. Additionally, it exposes some options to allow effects like gradient texts and animations.
 
 ## Getting Started
 
+### Installation
 
-### Install dependencies
+    npm install @jerbits/typography
+
+### Add to your page
+
+```jsx
+import { Typography } from '@jerbits/typography';
+
+<Typography.H1>H1 Heading</Typography.H1>;
+```
+
+### Configuration
+| Props | type | Description |
+| --- | --- | --- |
+| classes | string | Append your custom classes to the Typography element |
+| id | string | Add a unique ID |
+| size | string | Predefined sizes for each Typography element. Allows elements to be displayed in a different size while retaining its heading tag|
+| gradient.gradientCss | string | gradient css function e.g. linear-gradient(#e66465, #9198e5) |
+| gradient.animate | string | allows basic left to right animation on the gradient |
+
+### All available tags
+
+```jsx
+import { Typography } from '@jerbits/typography';
+
+<Typography.H1>H1 Heading</Typography.H1>;
+<Typography.H2>H2 Heading</Typography.H2>;
+<Typography.H3>H3 Heading</Typography.H3>;
+<Typography.H4>H4 Heading</Typography.H4>;
+<Typography.H5>H5 Heading</Typography.H5>;
+<Typography.P>Paragraph</Typography.P>;
+```
+
+### Keep as H1 tag but with H4 size
+
+```jsx
+import { Typography } from '@jerbits/typography';
+
+<Typography.H1 size='H4'>H1 Heading</Typography.H1>;
+```
+
+### H1 tag but with H4 size
+
+```jsx
+import { Typography } from '@jerbits/typography';
+
+<Typography.H1 size='H4'>H1 Heading</Typography.H1>;
+```
+
+### Static gradient
+
+```jsx
+import { Typography } from '@jerbits/typography';
+
+<Typography.H1 gradient={gradient: {gradientCss: linear-gradient(#e66465, #9198e5)}}>H1 Heading</Typography.H1>;
+```
 
 
+### Animated gradient
 
-    yarn install
+```jsx
+import { Typography } from '@jerbits/typography';
 
-### Run Storybook
-
-
-
-    yarn start:typography
-
-### Build Storybook
-
-    yarn build:typography
-
-
-### Run tests
-
-
-    yarn test:typography
+<Typography.H1 gradient={gradient: {gradientCss: linear-gradient(#e66465, #9198e5), isAnimate: true}}>H1 Heading</Typography.H1>;
+```

@@ -4,12 +4,17 @@ import './index.css';
 
 type TSize = 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'P';
 
+type TGradientOptions = {
+	isAnimated?: boolean;
+	gradientCss: string; // gradient css function e.g. linear-gradient(#e66465, #9198e5)
+};
+
 export interface TypographyProps {
 	children: JSX.Element | ReactNode;
 	classes?: string;
 	id?: string;
 	size?: TSize;
-	gradient?: string; // gradient css function e.g. linear-gradient(#e66465, #9198e5)
+	gradient?: TGradientOptions;
 }
 
 const STYLES_MAP = {
@@ -22,9 +27,14 @@ const STYLES_MAP = {
 } as Record<TSize, string>;
 
 const Heading1: FC<TypographyProps> = ({ children, classes, id, size = 'H1', gradient }: TypographyProps) => {
-	const heading1styles = cn(STYLES_MAP[size], { '!vui-bg-clip-text vui-text-transparent vui-pb-[4%]': gradient }, classes);
+	const heading1styles = cn(
+		STYLES_MAP[size],
+		{ 'vui-bg-clip-text vui-pb-[4%] vui-text-transparent ': gradient },
+		{ 'vui-animate-[move_10s_ease_infinite] vui-bg-[length:200%_200%]': gradient?.isAnimated },
+		classes
+	);
 	return (
-		<h1 id={id} className={heading1styles} style={gradient ? { background: gradient } : {}}>
+		<h1 id={id} className={heading1styles} style={gradient ? { backgroundImage: gradient.gradientCss } : {}}>
 			{children}
 		</h1>
 	);

@@ -17,10 +17,23 @@ const H4: StoryFn<typeof Typography.H4> = (args) => <Typography.H4 {...args}>H4 
 const H5: StoryFn<typeof Typography.H5> = (args) => <Typography.H5 {...args}>H5 Heading</Typography.H5>;
 
 const DEFAULT_ARGS = { classes: '', id: '' };
-export const Gradient = H1.bind({});
-Gradient.args = {
+export const StaticGradient = H1.bind({});
+StaticGradient.args = {
 	...DEFAULT_ARGS,
-	gradient: 'linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)',
+	gradient: {
+		gradientCss: 'linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)',
+		isAnimated: false
+	},
+	classes: 'vui-font-bold'
+}
+
+export const AnimatedGradient = H1.bind({});
+AnimatedGradient.args = {
+	...DEFAULT_ARGS,
+	gradient: {
+		gradientCss: 'linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)',
+		isAnimated: true
+	},
 	classes: 'vui-font-bold'
 }
 
