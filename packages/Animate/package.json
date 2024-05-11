@@ -1,7 +1,7 @@
 {
   "name": "@jerbits/animate",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,7 +21,7 @@
     "react-intersection-observer": "^9.8.2"
   },
   "devDependencies": {
-    "@jerbits/typography": "^0.0.2"
+    "@jerbits/typography": "^0.1.0"
   },
   "description": "Animation component for Versi-ui",
   "repository": {

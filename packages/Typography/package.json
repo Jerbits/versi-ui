@@ -1,7 +1,7 @@
 {
   "name": "@jerbits/typography",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,6 +33,5 @@
   "bugs": {
     "url": "https://github.com/Jerbits/versi-ui/issues"
   },
-  "homepage": "https://github.com/Jerbits/versi-ui/tree/master/packages/Typography",
-  "devDependencies": {}
+  "homepage": "https://github.com/Jerbits/versi-ui/tree/master/packages/Typography"
 }
