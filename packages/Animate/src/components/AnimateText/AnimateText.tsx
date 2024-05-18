@@ -13,8 +13,6 @@ export interface AnimateTextProps {
 	unmount?: boolean;
 }
 
-
-
 const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
 	const Component = ({ children, classes, animationFlag, delay = 0, unmount = false }: AnimateTextProps) => {
 		const { updateDeepestChild, transformer } = useChildren();
@@ -32,15 +30,13 @@ const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
 			onRest: () => !animationFlag && setIsShow(false)
 		});
 
-		
-
 		if (!children) return <></>;
 		return (
-			<animated.div ref={ref} className={classnames}>
+			<div ref={ref} className={classnames}>
 				{updateDeepestChild(children, (element) => {
-					return transformer(element);
+					return transformer(element, animationFlag ?? inView);
 				})}
-			</animated.div>
+			</div>
 		);
 	};
 	return Component;

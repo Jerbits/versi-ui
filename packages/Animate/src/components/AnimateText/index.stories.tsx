@@ -19,6 +19,7 @@ const Interlock: StoryFn<typeof AnimateText.Interlock> = (args) => (
 export const InterlockOnView = Interlock.bind({});
 export const InterlockWithFlag = Interlock.bind({});
 
-Interlock.args = {
-	delay: 500
+InterlockWithFlag.args = {
+	delay: 500,
+	animationFlag: false
 };
