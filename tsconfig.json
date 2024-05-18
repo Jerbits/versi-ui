@@ -14,7 +14,32 @@
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"paths": {
+			"@animate/components/*": ["./packages/Animate/src/components/*"],
+			"@animate/hooks/*": ["./packages/Animate/src/hooks/*"],
+			"@animate/mocks/*": ["./packages/Animate/src/mocks/*"],
+			"@animate/helpers/*": ["./packages/Animate/src/helpers/*"],
+			"@animate/types/*": ["./packages/Animate/src/types/*"],
+			"@animate/icons/*": ["./packages/Animate/src/assets/icons/*"],
+			"@animate/constants/*": ["./packages/Animate/src/constants/*"],
+			
+			"@typography/components/*": ["./packages/Typography/src/components/*"],
+			"@typography/hooks/*": ["./packages/Typography/src/hooks/*"],
+			"@typography/mocks/*": ["./packages/Typography/src/mocks/*"],
+			"@typography/helpers/*": ["./packages/Typography/src/helpers/*"],
+			"@typography/types/*": ["./packages/Typography/src/types/*"],
+			"@typography/icons/*": ["./packages/Typography/src/assets/icons/*"],
+			"@typography/constants/*": ["./packages/Typography/src/constants/*"],
+
+			"@forms/components/*": ["./packages/Forms/src/components/*"],
+			"@forms/hooks/*": ["./packages/Forms/src/hooks/*"],
+			"@forms/mocks/*": ["./packages/Forms/src/mocks/*"],
+			"@forms/helpers/*": ["./packages/Forms/src/helpers/*"],
+			"@forms/types/*": ["./packages/Forms/src/types/*"],
+			"@forms/icons/*": ["./packages/Forms/src/assets/icons/*"],
+			"@forms/constants/*": ["./packages/Forms/src/constants/*"]
+		}
 	},
 	"include": ["./packages/*/src"],
 	"references": [

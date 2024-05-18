@@ -1,15 +1,9 @@
-import { Children, ReactNode, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { default as cn } from 'classnames';
 import { animated, useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 
-import {
-	animationXCfg,
-	animationYCfg,
-	AnimationConfigProps,
-	animationOpacityCfg,
-	animationScaleCfg
-} from '../animations';
+import { animationYCfg, AnimationConfigProps } from '../animations';
 import { useChildren } from '@animate/hooks/useChildren';
 
 export interface AnimateTextProps {
@@ -22,7 +16,7 @@ export interface AnimateTextProps {
 
 const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
 	const Component = ({ children, classes, animationFlag, delay = 0, unmount = false }: AnimateTextProps) => {
-		const { child } = useChildren(children);
+		const { updateDeepestChild } = useChildren();
 		const [isShow, setIsShow] = useState<boolean>(true);
 		const { ref, inView } = useInView({
 			triggerOnce: true,
@@ -36,10 +30,16 @@ const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
 			onStart: () => animationFlag && setIsShow(true),
 			onRest: () => !animationFlag && setIsShow(false)
 		});
-		if (!child) return <></>;
+		if (!children) return <></>;
 		return (
 			<animated.div ref={ref} className={classnames} style={animationStyles}>
-				{child}
+				{updateDeepestChild(children, (element) => {
+					if (typeof element === 'string')
+						return element
+							.split('')
+							.map((char) => `<span>${char}</span>`)
+							.join('');
+				})}
 			</animated.div>
 		);
 	};
