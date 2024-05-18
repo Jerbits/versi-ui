@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as path from "path";
 import { getBaseConfig } from "../../vite.config";
 
@@ -9,14 +10,13 @@ export default getBaseConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@Components': path.resolve(__dirname, 'src/components'), 
-      '@Hooks': path.resolve(__dirname, 'src/hooks'), 
-      '@Mocks': path.resolve(__dirname, 'src/mocks'), 
-      '@Helpers': path.resolve(__dirname, 'src/helpers'), 
-      '@Types': path.resolve(__dirname, 'src/types'), 
-      '@Icons': path.resolve(__dirname, 'src/assets/icons'), 
-      '@Constants': path.resolve(__dirname, 'src/constants')
+      '@typography/components': path.resolve(__dirname, 'src/components'), 
+      '@typography/hooks': path.resolve(__dirname, 'src/hooks'), 
+      '@typography/mocks': path.resolve(__dirname, 'src/mocks'), 
+      '@typography/helpers': path.resolve(__dirname, 'src/helpers'), 
+      '@typography/types': path.resolve(__dirname, 'src/types'), 
+      '@typography/icons': path.resolve(__dirname, 'src/assets/icons'), 
+      '@typography/constants': path.resolve(__dirname, 'src/constants')
     }
   },
 });

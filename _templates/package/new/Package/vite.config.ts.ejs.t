@@ -1,6 +1,7 @@
 ---
 to: packages/<%= h.capitalize(name) %>/vite.config.ts
 ---
+// @ts-nocheck
 import * as path from "path";
 import { getBaseConfig } from "../../vite.config";
 
@@ -12,14 +13,13 @@ export default getBaseConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@Components': path.resolve(__dirname, 'src/components'), 
-      '@Hooks': path.resolve(__dirname, 'src/hooks'), 
-      '@Mocks': path.resolve(__dirname, 'src/mocks'), 
-      '@Helpers': path.resolve(__dirname, 'src/helpers'), 
-      '@Types': path.resolve(__dirname, 'src/types'), 
-      '@Icons': path.resolve(__dirname, 'src/assets/icons'), 
-      '@Constants': path.resolve(__dirname, 'src/constants')
+      '@<%= h.capitalize(name) %>/components': path.resolve(__dirname, 'src/components'), 
+      '@<%= h.capitalize(name) %>/hooks': path.resolve(__dirname, 'src/hooks'), 
+      '@<%= h.capitalize(name) %>/mocks': path.resolve(__dirname, 'src/mocks'), 
+      '@<%= h.capitalize(name) %>/helpers': path.resolve(__dirname, 'src/helpers'), 
+      '@<%= h.capitalize(name) %>/types': path.resolve(__dirname, 'src/types'), 
+      '@<%= h.capitalize(name) %>/icons': path.resolve(__dirname, 'src/assets/icons'), 
+      '@<%= h.capitalize(name) %>/constants': path.resolve(__dirname, 'src/constants')
     }
   },
 });

@@ -2,14 +2,13 @@
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
 		"paths": {
-			"@/*": ["./src"],
-			"@Components/*": ["./src/components/*"],
-			"@Hooks/*": ["./src/hooks/*"],
-			"@Mocks/*": ["./src/mocks/*"],
-			"@Helpers/*": ["./src/helpers/*"],
-			"@Types/*": ["./src/types/*"],
-			"@Icons/*": ["./src/assets/icons/*"],
-			"@Constants/*": ["./src/constants/*"]
+			"@typography/components/*": ["./src/components/*"],
+			"@typography/hooks/*": ["./src/hooks/*"],
+			"@typography/mocks/*": ["./src/mocks/*"],
+			"@typography/helpers/*": ["./src/helpers/*"],
+			"@typography/types/*": ["./src/types/*"],
+			"@typography/icons/*": ["./src/assets/icons/*"],
+			"@typography/constants/*": ["./src/constants/*"]
 		}
 	}
 }

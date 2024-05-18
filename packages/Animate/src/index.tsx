@@ -1,1 +1,2 @@
-export * from "./components";
+export * from "./components/AnimateDirections";
+export * from "./components/AnimateText";

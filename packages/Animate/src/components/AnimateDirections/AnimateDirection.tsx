@@ -9,9 +9,9 @@ import {
   AnimationConfigProps,
   animationOpacityCfg,
   animationScaleCfg
-} from './animations';
+} from '../animations';
 
-export interface AnimateProps {
+export interface AnimateDirectionProps {
   children?: JSX.Element | ReactNode;
   classes?: string;
   animationFlag?: boolean;
@@ -20,7 +20,7 @@ export interface AnimateProps {
 }
 
 const RenderPropAnimation = (springConfig: AnimationConfigProps, isReverse: boolean) => {
-  const Component = ({ children, classes, animationFlag, delay = 0, unmount = false }: AnimateProps) => {
+  const Component = ({ children, classes, animationFlag, delay = 0, unmount = false }: AnimateDirectionProps) => {
     const [isShow, setIsShow] = useState<boolean>(true);
     const { ref, inView } = useInView({
       triggerOnce: true,
@@ -36,17 +36,15 @@ const RenderPropAnimation = (springConfig: AnimationConfigProps, isReverse: bool
     });
     if (!children) return <></>;
     return (
-      <>
         <animated.div ref={ref} className={classnames} style={animationStyles}>
           {children}
         </animated.div>
-      </>
     );
   };
   return Component;
 };
 
-const Animate = {
+const AnimateDirection = {
   Left: RenderPropAnimation(animationXCfg, false),
   Right: RenderPropAnimation(animationXCfg, true),
   Up: RenderPropAnimation(animationYCfg, true),
@@ -55,4 +53,4 @@ const Animate = {
   Scale: RenderPropAnimation(animationScaleCfg, false)
 };
 
-export default Animate
+export default AnimateDirection

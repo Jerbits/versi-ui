@@ -1,60 +1,81 @@
-import { jsx as a, Fragment as f } from "react/jsx-runtime";
-import { useState as h } from "react";
-import w from "classnames";
-import { easings as i, useSpring as x, animated as R } from "@react-spring/web";
+import { jsx as c, Fragment as w } from "react/jsx-runtime";
+import { useState as O } from "react";
+import R from "classnames";
+import { easings as m, useSpring as x, animated as A } from "@react-spring/web";
 import { useInView as v } from "react-intersection-observer";
-const m = (t, e = 0, o = !1) => ({
+const f = (t, e = 0, i = !1) => ({
   opacity: t ? 1 : 0,
-  x: t ? 0 : o ? 50 : -50,
+  x: t ? 0 : i ? 50 : -50,
   delay: e,
   config: {
     duration: 200,
-    easing: i.easeOutCirc
+    easing: m.easeOutCirc
   }
-}), u = (t, e = 0, o = !1) => ({
+}), u = (t, e = 0, i = !1) => ({
   opacity: t ? 1 : 0,
-  y: t ? 0 : o ? 20 : -20,
+  y: t ? 0 : i ? 20 : -20,
   delay: e,
   config: {
     duration: 500,
-    easing: i.easeOutCirc
+    easing: m.easeOutCirc
   }
-}), A = (t, e = 0) => ({
+}), D = (t, e = 0) => ({
   opacity: t ? 1 : 0,
   transform: `scale(${t ? 1 : 0})`,
   delay: e,
   config: {
     duration: 200,
-    easing: i.easeOutCirc
+    easing: m.easeOutCirc
   }
 }), I = (t, e = 0) => ({
   opacity: t ? 1 : 0,
   delay: e,
   config: {
     duration: 300,
-    easing: i.easeOutCirc
+    easing: m.easeOutCirc
   }
-}), n = (t, e) => ({ children: r, classes: p, animationFlag: s, delay: g = 0, unmount: l = !1 }) => {
-  const [d, c] = h(!0), { ref: C, inView: y } = v({
+}), s = (t, e) => ({ children: r, classes: p, animationFlag: n, delay: l = 0, unmount: g = !1 }) => {
+  const [d, a] = O(!0), { ref: S, inView: y } = v({
     triggerOnce: !0,
     threshold: 0
-  }), S = w(p, {
-    "!vui-hidden": !d && l
+  }), C = R(p, {
+    "!vui-hidden": !d && g
     // hide the component with CSS versus un-mounting to prevent re-rendering of hooks
-  }), O = x({
-    ...t(s ?? y, g, e),
-    onStart: () => s && c(!0),
-    onRest: () => !s && c(!1)
+  }), h = x({
+    ...t(n ?? y, l, e),
+    onStart: () => n && a(!0),
+    onRest: () => !n && a(!1)
   });
-  return r ? /* @__PURE__ */ a(f, { children: /* @__PURE__ */ a(R.div, { ref: C, className: S, style: O, children: r }) }) : /* @__PURE__ */ a(f, {});
-}, P = {
-  Left: n(m, !1),
-  Right: n(m, !0),
-  Up: n(u, !0),
-  Down: n(u, !1),
-  Opacity: n(I, !1),
-  Scale: n(A, !1)
+  return r ? /* @__PURE__ */ c(A.div, { ref: S, className: C, style: h, children: r }) : /* @__PURE__ */ c(w, {});
+}, U = {
+  Left: s(f, !1),
+  Right: s(f, !0),
+  Up: s(u, !0),
+  Down: s(u, !1),
+  Opacity: s(I, !1),
+  Scale: s(D, !1)
+}, o = (t, e) => ({ children: r, classes: p, animationFlag: n, delay: l = 0, unmount: g = !1 }) => {
+  const [d, a] = O(!0), { ref: S, inView: y } = v({
+    triggerOnce: !0,
+    threshold: 0
+  }), C = R(p, {
+    "!vui-hidden": !d && g
+    // hide the component with CSS versus un-mounting to prevent re-rendering of hooks
+  }), h = x({
+    ...t(n ?? y, l, e),
+    onStart: () => n && a(!0),
+    onRest: () => !n && a(!1)
+  });
+  return r ? /* @__PURE__ */ c(A.div, { ref: S, className: C, style: h, children: r }) : /* @__PURE__ */ c(w, {});
+}, $ = {
+  Left: o(f, !1),
+  Right: o(f, !0),
+  Up: o(u, !0),
+  Down: o(u, !1),
+  Opacity: o(I, !1),
+  Scale: o(D, !1)
 };
 export {
-  P as Animate
+  U as AnimateDirection,
+  $ as AnimateText
 };

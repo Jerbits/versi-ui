@@ -1,6 +1,11 @@
 import { FC } from 'react';
 import { ReactNode } from 'react';
 
+declare type TGradientOptions = {
+    isAnimated?: boolean;
+    gradientCss: string;
+};
+
 declare type TSize = 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'P';
 
 export declare const Typography: {
@@ -18,7 +23,7 @@ declare interface TypographyProps {
     classes?: string;
     id?: string;
     size?: TSize;
-    gradient?: string;
+    gradient?: TGradientOptions;
 }
 
 export { }
