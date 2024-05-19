@@ -18,12 +18,12 @@ export const useChildren = () => {
 			});
 		}) as T;
 	};
-	const transformer = (element: string, flag: boolean) => {
+	const transformer = ({ element, flag, delay = 0 }: { element: string; flag: boolean; delay?: number }) => {
 		const CHARACTERS = element.split('');
 		const to = (i: number) => ({
 			y: 0,
 			opacity: 1,
-			delay: i * (100 - (i * 2))
+			delay: i * (100 - i * 2)
 		});
 		const from = (i: number) => ({
 			y: 50 * (i % 2 ? -1 : 1),
@@ -33,15 +33,19 @@ export const useChildren = () => {
 			from: from(i)
 		}));
 		useEffect(() => {
+			let timeout: ReturnType<typeof setTimeout>;
 			if (!flag) {
 				setChars((i) => ({
 					...from(i)
 				}));
 			} else {
-				setChars((i) => ({
-					...to(i)
-				}));
+				timeout = setTimeout(() => {
+					setChars((i) => ({
+						...to(i)
+					}));
+				}, delay);
 			}
+			return () => clearTimeout(timeout);
 		}, [flag]);
 		if (typeof element === 'string') {
 			return chars.map(({ y, opacity }, i) => (

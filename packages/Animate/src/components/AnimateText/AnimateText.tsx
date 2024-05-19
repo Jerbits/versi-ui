@@ -1,6 +1,5 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 import { default as cn } from 'classnames';
-import { animated, useSpring, useSprings } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import { animationYCfg, AnimationConfigProps } from '../animations';
 import { useChildren } from '@animate/hooks/useChildren';
@@ -14,27 +13,19 @@ export interface AnimateTextProps {
 }
 
 const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
-	const Component = ({ children, classes, animationFlag, delay = 0, unmount = false }: AnimateTextProps) => {
+	const Component = ({ children, classes, animationFlag, delay = 0 }: AnimateTextProps) => {
 		const { updateDeepestChild, transformer } = useChildren();
-		const [isShow, setIsShow] = useState<boolean>(true);
 		const { ref, inView } = useInView({
 			triggerOnce: true,
 			threshold: 0
 		});
-		const classnames = cn(classes, {
-			'!vui-hidden': !isShow && unmount // hide the component with CSS versus un-mounting to prevent re-rendering of hooks
-		});
-		const animationStyles = useSpring({
-			...springConfig(animationFlag ?? inView, delay, false),
-			onStart: () => animationFlag && setIsShow(true),
-			onRest: () => !animationFlag && setIsShow(false)
-		});
+		const classnames = cn(classes);
 
 		if (!children) return <></>;
 		return (
 			<div ref={ref} className={classnames}>
 				{updateDeepestChild(children, (element) => {
-					return transformer(element, animationFlag ?? inView);
+					return transformer({element, flag: animationFlag ?? inView, delay});
 				})}
 			</div>
 		);

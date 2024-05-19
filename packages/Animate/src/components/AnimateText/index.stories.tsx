@@ -12,14 +12,16 @@ export default {
 
 const Interlock: StoryFn<typeof AnimateText.Interlock> = (args) => (
 	<AnimateText.Interlock {...args}>
-		<Typography.H1><div><div>Interlock Text Effect</div></div></Typography.H1>
+		<Typography.H1>Interlock Text Effect</Typography.H1>
 	</AnimateText.Interlock>
 );
 
 export const InterlockOnView = Interlock.bind({});
 export const InterlockWithFlag = Interlock.bind({});
 
+InterlockOnView.args = {
+};
+
 InterlockWithFlag.args = {
-	delay: 500,
-	animationFlag: false
+	animationFlag: false,
 };
