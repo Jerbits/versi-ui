@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import { default as cn } from 'classnames';
 import { useInView } from 'react-intersection-observer';
-import { animationYCfg, AnimationConfigProps } from '../animations';
 import { useChildren } from '@animate/hooks/useChildren';
+import { ITextAnimationConfig, useTransformer } from '@animate/hooks/useTransformer';
 
 export interface AnimateTextProps {
 	children?: ReactNode | JSX.Element;
@@ -12,9 +12,10 @@ export interface AnimateTextProps {
 	unmount?: boolean;
 }
 
-const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
+const RenderPropAnimation = (springConfig: ITextAnimationConfig) => {
 	const Component = ({ children, classes, animationFlag, delay = 0 }: AnimateTextProps) => {
-		const { updateDeepestChild, transformer } = useChildren();
+		const { updateDeepestChild } = useChildren();
+		const { applyTextffect } = useTransformer(springConfig);
 		const { ref, inView } = useInView({
 			triggerOnce: true,
 			threshold: 0
@@ -25,7 +26,7 @@ const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
 		return (
 			<div ref={ref} className={classnames}>
 				{updateDeepestChild(children, (element) => {
-					return transformer({element, flag: animationFlag ?? inView, delay});
+					return applyTextffect({element, flag: animationFlag ?? inView, delay});
 				})}
 			</div>
 		);
@@ -34,7 +35,11 @@ const RenderPropAnimation = (springConfig: AnimationConfigProps) => {
 };
 
 const AnimateText = {
-	Interlock: RenderPropAnimation(animationYCfg)
+	Interlock: RenderPropAnimation({isInterlock: true, yAxisStart: 50}),
+	ChainUp: RenderPropAnimation({isInterlock: false, yAxisStart: 50}),
+	ChainDown: RenderPropAnimation({isInterlock: false, yAxisStart: -50})
+
+
 };
 
 export default AnimateText;
