@@ -38,8 +38,6 @@ const AnimateText = {
 	Interlock: RenderPropAnimation({isInterlock: true, yAxisStart: 50}),
 	ChainUp: RenderPropAnimation({isInterlock: false, yAxisStart: 50}),
 	ChainDown: RenderPropAnimation({isInterlock: false, yAxisStart: -50})
-
-
 };
 
 export default AnimateText;

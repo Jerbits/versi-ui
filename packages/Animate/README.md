@@ -1,53 +1,50 @@
 # Versi UI - Animate
 
-  
-A monorepo of reusable components for my various projects
-
-  
-
-## Tooling
-
-  
-
-### Lerna
-
-managing JavaScript projects with multiple packages. It optimizes the workflow around managing multipackage repositories with git and npm.
-
-  
-
-### Vite
-
-build tool providing rapid hot module replacement.
-
-  
-
-### Storybook
-
-an open-source tool for developing and organizing UI components in isolation, which also serves as a platform for visual testing and creating interactive documentation.
-
-
+Animate is an animation component running on react-spring. Animate is written in component format to make it easy to use. It contains a number of very common animation effect for wrapper elements as well as texts.
 
 ## Getting Started
 
+### Installation
 
-### Install dependencies
+    npm install @jerbits/animate
+
+### Import and use
+```jsx
+import { AnimateDirection } from '@jerbits/animate';
+
+<AnimateDirection.Up>This animates up when it renders</AnimateDirection.Up>;
+
+```
+
+### Configuration
+| Props | type | Description |
+| --- | --- | --- |
+| classes | string | Append your custom classes to the Animate element |
+| animationFlag | boolean | controls animation start via flag instead on render |
+| delay | number | animation start delay in milliseconds |
 
 
+### Animate Direction Tags
 
-    yarn install
+```jsx
+import { AnimateDirection } from '@jerbits/animate';
 
-### Run Storybook
+<AnimateDirection.Up>This animates up when it renders</AnimateDirection.Up>;
 
+<AnimateDirection.Down>This animates down when it renders</AnimateDirection.Down>;
 
+<AnimateDirection.Left>This animates left when it renders</AnimateDirection.Left>;
 
-    yarn start:animate
+<AnimateDirection.Right>This animates right when it renders</AnimateDirection.Right>;
 
-### Build Storybook
+```
 
-    yarn build:animate
+### Animate Text Tags
 
+```jsx
+import { Animate } from '@jerbits/animate';
 
-### Run tests
-
-
-    yarn test:animate
+<AnimateText.Interlock>Interlock text effect</AnimateText.Interlock>;
+<AnimateText.ChainUp>Chain up text effect</AnimateText.ChainUp>;
+<AnimateText.ChainDown>Chain down text effect</AnimateText.ChainDown>;
+```
