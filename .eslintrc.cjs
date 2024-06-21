@@ -12,7 +12,6 @@ module.exports = {
 		'plugin:prettier/recommended',
 		'plugin:import/recommended'
 	],
-	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true
