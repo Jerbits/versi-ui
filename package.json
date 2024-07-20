@@ -24,7 +24,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css}\"",
     "eslint": "eslint .",
     "test": "vitest",
-    "deploy-storybook": "touch ./storybook-static/.nojekyll && gh-pages -d storybook-static -t true"
+    "deploy-storybook": "storybook build && touch ./storybook-static/.nojekyll && gh-pages -d storybook-static -t true"
   },
   "dependencies": {
     "react": "^18.2.0",

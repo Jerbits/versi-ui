@@ -2,9 +2,9 @@
 to: packages/<%= h.capitalize(name) %>/tailwind.config.js
 ---
 /** @type {import('tailwindcss').Config} */
-const path = require('path');
+const { join } = require('node:path');
 module.exports = {
-	content: ['./src/**/*.{js,ts,jsx,tsx}'],
+	content: [join(__dirname, './src/**/*.{js,ts,jsx,tsx}')],
 	theme: {
 		extend: {
 			
