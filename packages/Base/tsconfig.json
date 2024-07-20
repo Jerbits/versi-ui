@@ -1,0 +1,14 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"paths": {
+			"@Base/components/*": ["./src/components/*"],
+			"@Base/hooks/*": ["./src/hooks/*"],
+			"@Base/mocks/*": ["./src/mocks/*"],
+			"@Base/helpers/*": ["./src/helpers/*"],
+			"@Base/types/*": ["./src/types/*"],
+			"@Base/icons/*": ["./src/assets/icons/*"],
+			"@Base/constants/*": ["./src/constants/*"]
+		}
+	}
+}

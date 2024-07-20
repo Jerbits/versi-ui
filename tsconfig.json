@@ -38,7 +38,15 @@
 			"@forms/helpers/*": ["./packages/Forms/src/helpers/*"],
 			"@forms/types/*": ["./packages/Forms/src/types/*"],
 			"@forms/icons/*": ["./packages/Forms/src/assets/icons/*"],
-			"@forms/constants/*": ["./packages/Forms/src/constants/*"]
+			"@forms/constants/*": ["./packages/Forms/src/constants/*"],
+
+			"@base/components/*": ["./packages/Base/src/components/*"],
+			"@base/hooks/*": ["./packages/Base/src/hooks/*"],
+			"@base/mocks/*": ["./packages/Base/src/mocks/*"],
+			"@base/helpers/*": ["./packages/Base/src/helpers/*"],
+			"@base/types/*": ["./packages/Base/src/types/*"],
+			"@base/icons/*": ["./packages/Base/src/assets/icons/*"],
+			"@base/constants/*": ["./packages/Base/src/constants/*"]
 		}
 	},
 	"include": ["./packages/*/src"],
