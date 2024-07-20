@@ -8,7 +8,7 @@ export default {
 	title: 'Example/<%= h.capitalize(name) %>',
 	component: <%= h.capitalize(name) %>,
 	parameters: {
-		layout: 'fullscreen'
+		layout: 'centered'
 	}
 } as Meta<typeof <%= h.capitalize(name) %>>;
 
