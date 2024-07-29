@@ -1,24 +1,45 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { animated, useSprings } from '@react-spring/web';
+import { EASING_DICTIONARY, TEasingDictionary } from '@animate/components/animations';
 
 export interface ITextAnimationConfig {
-    isInterlock: boolean,
-    yAxisStart: number
+	isInterlock: boolean;
+	yAxisStart: number;
 }
+
+interface IApplyTextEffect {
+	element: string;
+	flag: boolean;
+	delay?: number;
+	duration: number;
+	trail: number;
+	easing: TEasingDictionary;
+}
+
 export const useTransformer = ({ isInterlock, yAxisStart }: ITextAnimationConfig) => {
-	const applyTextffect = ({ element, flag, delay = 0 }: { element: string; flag: boolean; delay?: number }) => {
+	const applyTextffect = ({ element, flag, delay = 0, duration, trail, easing }: IApplyTextEffect) => {
 		const CHARACTERS = element.split('');
-		const to = (i: number) => ({
-			y: 0,
-			opacity: 1,
-			delay: i * (100 - i * 2)
-		});
-		const from = (i: number) => ({
-			y: isInterlock ? yAxisStart * (i % 2 ? -1 : 1) : yAxisStart,
-			opacity: 0
-		});
+		const to = useCallback(
+			(i: number) => ({
+				y: 0,
+				opacity: 1,
+				delay: i * (trail - i * 2)
+			}),
+			[]
+		);
+		const from = useCallback(
+			(i: number) => ({
+				y: isInterlock ? yAxisStart * (i % 2 ? -1 : 1) : yAxisStart,
+				opacity: 0
+			}),
+			[yAxisStart, isInterlock]
+		);
 		const [chars, setChars] = useSprings(CHARACTERS.length, (i) => ({
-			from: from(i)
+			from: from(i),
+			config: {
+				duration,
+				easing: EASING_DICTIONARY[easing]
+			}
 		}));
 		useEffect(() => {
 			let timeout: ReturnType<typeof setTimeout>;

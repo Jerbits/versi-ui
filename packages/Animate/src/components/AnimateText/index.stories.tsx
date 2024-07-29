@@ -1,14 +1,22 @@
 import { StoryFn, Meta } from '@storybook/react';
 import { Typography } from '@jerbits/typography';
 import { AnimateText } from '.';
+import { EASING_DICTIONARY, TEasingDictionary } from '../animations';
 
 export default {
 	title: 'Example/Animate/Text',
 	component: AnimateText.Interlock,
+	argTypes: { easing: { type: 'select', options: Object.keys(EASING_DICTIONARY) } },
 	parameters: {
 		layout: 'centered'
 	}
 } as Meta<typeof AnimateText>;
+
+const defaultArgs = {
+	duration: 200,
+	trail: 100,
+	easing: 'linear' as TEasingDictionary
+};
 
 const Interlock: StoryFn<typeof AnimateText.Interlock> = (args) => (
 	<AnimateText.Interlock {...args}>
@@ -29,32 +37,13 @@ const ChainDown: StoryFn<typeof AnimateText.Interlock> = (args) => (
 );
 
 export const InterlockOnView = Interlock.bind({});
-export const InterlockWithFlag = Interlock.bind({});
 
-InterlockOnView.args = {
-};
-
-InterlockWithFlag.args = {
-	animationFlag: false,
-};
-
+InterlockOnView.args = { ...defaultArgs };
 
 export const ChainUpOnView = ChainUp.bind({});
-export const ChainUpWithFlag = ChainUp.bind({});
 
-ChainUpOnView.args = {
-};
-
-ChainUpWithFlag.args = {
-	animationFlag: false,
-};
+ChainUpOnView.args = { ...defaultArgs };
 
 export const ChainDownOnView = ChainDown.bind({});
-export const ChainDownWithFlag = ChainDown.bind({});
 
-ChainDownOnView.args = {
-};
-
-ChainDownWithFlag.args = {
-	animationFlag: false,
-};
+ChainDownOnView.args = { ...defaultArgs };
