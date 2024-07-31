@@ -1,15 +1,11 @@
-import { FC, ReactNode } from 'react';
-import { default as cn } from 'classnames';
+import { FC } from 'react';
+// import { default as cn } from 'classnames';
 import './index.css';
 
-export interface BaseProps {
+export interface BaseProps {}
 
-}
-
-const Base: FC<BaseProps> = ({ children, classes }: BaseProps) => {
-
+const Base: FC<BaseProps> = () => {
 	return <>Base</>;
 };
-
 
 export default Base;
